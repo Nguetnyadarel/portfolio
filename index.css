@@ -1,0 +1,135 @@
+.loin{
+  height: 50px;
+}
+.lens{
+  height: 320px;
+}
+.accueil-photos {
+  background-color: white;
+  padding: 80px;
+}
+
+.accueil-photos h2 {
+  color: #242424;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.accueil-photos div {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.accueil-introduction {
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  align-items: flex-start;
+  margin: auto;
+}
+
+.accueil-introduction h1 {
+  /* elles donne une espace entre le titre et le paragraphe */
+  margin-bottom: 15px;
+}
+
+.accueil-introduction p {
+  margin-bottom: 30px;
+}
+
+.accueil-introduction div {
+  padding-right: 80px;
+}
+
+.section-contact h2 {
+  color: #a5b4fc;
+  text-align: center;
+  margin-bottom: 50px;
+}
+/* utilisé sur tout le formulaire */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: auto;
+  color: white;
+}
+/* utilisé sur uniquement le nom et email du le formulaire */
+.form-nom-email {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.form-column {
+  flex: 1; /* permet d'agrandir et de rétrécir pour occuper l'espace disponible dans son conteneur flexible */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+/* utilisé sur le textarea du le formulaire */
+input,
+textarea {
+  padding: 15px;
+  border-radius: 3px;
+  border: none;
+}
+
+label {
+  margin-bottom: 10px;
+}
+/* utilisé sur boutton du formulaire */
+input[type='submit'] {
+  width: 200px;
+  margin: auto;
+  margin-top: 30px;
+}
+/* le media screen sa plique uniquement sur la page d'accueil */ 
+/* Sur tous types d'écran, quand la largeur de la fenêtre est comprise entre 1024px et 1280px */
+@media screen and (max-width: 996px) { 
+  /* pour rendre le site responsive (qui s'abdapte sur tout genr d'ecran) */
+  .accueil-introduction {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .lens{
+    height: 100%;
+  }
+
+  .accueil-introduction div {
+    padding-right: 0;
+    text-align: center;
+    order: 2;
+  }
+
+  .accueil-introduction img {
+    order: 1;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .accueil-photos {
+    padding: 20px;
+  }
+
+  .accueil-photos div {
+    flex-direction: column;
+  }
+  .accueil-photos img{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-contact {
+    padding: 50px 20px;
+  }
+
+  .form-nom-email {
+    flex-direction: column;
+    gap: 0;
+  }
+}
